@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JSON Tree Viewer</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/stackoverflow-dark.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<nav id="nav">
+		<div class="navjsons">
+			<a href="#" class="btnDestaque" onclick="showJsonUploadArea()">
+				<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<g fill="none" stroke="#9CA3AF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+						<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+						<path d="M14 2v6h6m-10 4a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1a1 1 0 0 1 1 1v1a1 1 0 0 0 1 1m4 0a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1a1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/>
+					</g>
+				</svg>
+				<span>Novo Json</span>
+			</a>
+			<ul id="listaJson">
+			</ul>
+		</div>
+		<div class="menu">
+			<a href="#" class="btnDestaque" onclick="clearLocalStorage()">Limpar historico</a>
+		</div>
+	</nav>
+	<section id="jsonArea">
+		<div id="jsonUploadArea">
+			<h1>JSON Tree Viewer</h1>
+			<p>Visualizador de JSON simples que funciona completamente no cliente. Sem troca de dados.</p>
+			<input type="file" id="seletorArquivo">
+		</div>
+		<div id="jsonCodeArea">
+			<pre id="json-code" class="language-json" contenteditable="true"></pre>
+		</div>
+		<a href="#" id="salvarJson" onclick="saveJson()">Salvar</a>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
